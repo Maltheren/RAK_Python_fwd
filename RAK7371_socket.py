@@ -117,7 +117,7 @@ class RAK7371:
             return None, None
         cls.last_ip = addr
 
-        if (data[3] == 2): #Hvis vi er igang med en pulldata pakke ACK den pakke
+        if (data[3] == 2): #Hvis vi er igang med en pulldata pakke => ACK den pakke
             print("PULLDATA => sending ACK")
             cls.lora_socket.sendto(bytes([0x02, token[0], token[1], 0x04]), addr) #En ACK pakke tilbage til RAK modulet.
             #cls.transmit(b'\x42\x00', addr)
@@ -163,7 +163,7 @@ class RAK7371:
             }
         }
         cmd = json.dumps(tx_json).encode('utf-8')  # Convert to bytes
-        ##Så vores packet forwarder svarer på samme port som han sender på... Det skal man lige være OBS på
+
         down_package = b'\x02'+bytes(token) + b'\x03' + bytes(cmd)
         cls.lora_socket.sendto(down_package ,addr)
         resp = cls.lora_socket.recvfrom(2048)
@@ -183,8 +183,7 @@ class RAK7371:
 def handle_exit(signum, frame):
     log.info("Exiting, cleaing up")
     print(f"cleaning up...")
-    RAK7371.FwdHandler._nuke() #Sørger bare for vi lige lukker pænt ned for den driver der kører i baggrunden.
-    sys.exit(0)
+    RAK7371.FwdHandler._nuke() #Closes the driver
 
 
 # If one wants to sniff the sniffed packages
