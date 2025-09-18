@@ -1,7 +1,10 @@
 # RAK7131 python interface
 
 ### Getting started 
+
 Currently the interface relies on the lora_pkt_fwd executable provided by https://github.com/Lora-net/sx1302_hal
+
+the executable should be located in ./drivers. If issues arise it might be nesseary to build it for the system its to be used on.
 
 For more info this guide for linux is recommended https://docs.rakwireless.com/product-categories/wisgate/rak7271-rak7371/quickstart/
 
