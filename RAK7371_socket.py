@@ -10,7 +10,7 @@ import signal
 from typing import Tuple
 
 
-#Vi tager lige en log med bare fordi
+#Creates a log file
 logging.basicConfig(
     level=logging.DEBUG,
     filename='RAK7371_socket.log',
@@ -21,7 +21,7 @@ log = logging.getLogger(__name__)
 
 
 
-###Sets up a port for
+###class to handle concentrator and for our interface
 class RAK7371:
     lora_socket: socket.socket
     last_ip: Tuple[str, int]
@@ -139,10 +139,11 @@ class RAK7371:
     
     @classmethod
     def poll(cls):
-        """Checks if we recieve any valid package from our forwarder"""
+        """Checks if we recieve any valid package from our forwarder, returns the token, and json object, both can be none in case no valid package were given."""
         data, addr = cls.lora_socket.recvfrom(1024)
         token, json_obj = cls._parse_packet(data, addr)
         return token, json_obj
+    
 
     @classmethod
     def _transmit(cls, token, addr, package, freq, pwr, sf, bw, cr):
@@ -194,17 +195,21 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, handle_exit)   # Ctrl+C
     signal.signal(signal.SIGTERM, handle_exit)  # kill
     print("Setting up RAK7371")
-    #RAK7371.setup_auto()
-    RAK7371._setup_socket()
+    RAK7371.setup_auto()
+    #RAK7371._setup_socket()
     print("Setup complete")
-    last_t = time.time()
-    while True:
-        token, data = RAK7371.poll()
-        if (data != None):
-            print(data)
-        
-        if (time.time() - last_t > 5):
-            RAK7371.transmit(b'\x42\x42\x42')
+    RAK7371.poll()
+
+
+
+#last_t = time.time()
+#    while True:
+#        token, data = RAK7371.poll()
+#        if (data != None):
+#            print(data)
+#        
+#        if (time.time() - last_t > 5):
+#            RAK7371.transmit(b'\x42\x42\x42')
 
 
 
