@@ -1,0 +1,4838 @@
+*** Packet Forwarder ***
+Version: 2.1.0
+*** SX1302 HAL library version info ***
+Version: 2.1.0;
+***
+INFO: Little endian host
+INFO: found configuration file global_conf.json, parsing it
+INFO: global_conf.json does contain a JSON object named SX130x_conf, parsing SX1302 parameters
+INFO: com_type USB, com_path /dev/ttyACM1, lorawan_public 1, clksrc 0, full_duplex 0
+INFO: antenna_gain 0 dBi
+INFO: Configuring legacy timestamp
+INFO: SX1261 spi_path is not configured in global_conf.json
+INFO: Configuring Tx Gain LUT for rf_chain 0 with 16 indexes for sx1250
+INFO: radio 0 enabled (type SX1250), center frequency 867500000, RSSI offset -215.399994, tx enabled 1, single input mode 0
+INFO: radio 1 enabled (type SX1250), center frequency 868500000, RSSI offset -215.399994, tx enabled 0, single input mode 0
+INFO: Lora multi-SF channel 0>  radio 1, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 1>  radio 1, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 2>  radio 1, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 3>  radio 0, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 4>  radio 0, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 5>  radio 0, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 6>  radio 0, IF 200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 7>  radio 0, IF 400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora std channel> radio 1, IF -200000 Hz, 250000 Hz bw, SF 7, Explicit header
+INFO: FSK channel> radio 1, IF 300000 Hz, 125000 Hz bw, 50000 bps datarate
+INFO: global_conf.json does contain a JSON object named gateway_conf, parsing gateway parameters
+INFO: gateway MAC address is configured to AA555A0000000000
+INFO: server hostname or IP address is configured to "localhost"
+INFO: upstream port is configured to "1730"
+INFO: downstream port is configured to "1730"
+INFO: downstream keep-alive interval is configured to 10 seconds
+INFO: statistics display interval is configured to 30 seconds
+INFO: upstream PUSH_DATA time-out is configured to 100 ms
+INFO: packets received with a valid CRC will be forwarded
+INFO: packets received with a CRC error will NOT be forwarded
+INFO: packets received with no CRC will NOT be forwarded
+INFO: GPS serial port path is configured to "/dev/ttyS0"
+INFO: Reference latitude is configured to 0.000000 deg
+INFO: Reference longitude is configured to 0.000000 deg
+INFO: Reference altitude is configured to 0 meters
+INFO: Beaconing period is configured to 0 seconds
+INFO: Beaconing signal will be emitted at 869525000 Hz
+INFO: Beaconing datarate is set to SF9
+INFO: Beaconing modulation bandwidth is set to 125000Hz
+INFO: Beaconing TX power is set to 14dBm
+INFO: Beaconing information descriptor is set to 0
+INFO: global_conf.json does contain a JSON object named debug_conf, parsing debug parameters
+INFO: got 2 debug reference payload
+INFO: reference payload ID 0 is 0xCAFE1234
+INFO: reference payload ID 1 is 0xCAFE2345
+INFO: setting debug log file name to loragw_hal.log
+WARNING: [main] impossible to open /dev/ttyS0 for GPS sync (check permissions)
+Opening USB communication interface
+INFO: Configuring TTY
+INFO: Flushing TTY
+INFO: Setting TTY in blocking mode
+INFO: Connect to MCU
+INFO: Concentrator MCU version is V01.00.00
+INFO: MCU status: sys_time:3109764 temperature:26.3oC
+Note: chip version is 0x12 (v1.2)
+INFO: using legacy timestamp
+INFO: LoRa Service modem: configuring preamble size to 8 symbols
+ARB: dual demodulation disabled for all SF
+INFO: [main] concentrator started, packet can now be received
+INFO: concentrator EUI: 0x0016c001f1563f28
+
+##### 2025-07-04 13:42:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 0 (0 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 30845207
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 26 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:42:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":26.4}}
+
+##### 2025-07-04 13:42:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 60849274
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:42:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":26.8}}
+
+##### 2025-07-04 13:43:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 90852196
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:43:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":26.8}}
+
+##### 2025-07-04 13:43:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 120856220
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:43:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":26.9}}
+
+##### 2025-07-04 13:44:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 150859926
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:44:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.0}}
+
+##### 2025-07-04 13:44:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 180862089
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:44:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.1}}
+
+INFO: Received pkt from mote: D002EBB0 (fcnt=46037)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":192080474,"chan":1,"rfch":1,"freq":868.300000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-118,"lsnr":-19.2,"foff":-171,"rssi":-100,"size":23,"data":"ALDrAtB+1bNmk8JAAAC36OgO+/KNgJI="}]}
+
+##### 2025-07-04 13:45:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 1 (23 bytes)
+# PUSH_DATA datagrams sent: 2 (375 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 210868593
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:45:29 GMT","rxnb":1,"rxok":1,"rxfw":1,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.1}}
+
+##### 2025-07-04 13:45:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 240872556
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:45:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.2}}
+ERROR: wrong coding rate (0) - timestamp_counter_correction
+
+##### 2025-07-04 13:46:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 100.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 270875600
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:46:29 GMT","rxnb":1,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.2}}
+
+##### 2025-07-04 13:46:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 300879511
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:46:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.2}}
+
+##### 2025-07-04 13:47:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 330881479
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:47:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.3}}
+
+##### 2025-07-04 13:47:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 360883490
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:47:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.3}}
+
+##### 2025-07-04 13:48:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 390889374
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:48:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.4}}
+
+##### 2025-07-04 13:48:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 420892509
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:48:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.4}}
+
+INFO: Received pkt from mote: D002EBB0 (fcnt=46037)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":433005440,"chan":0,"rfch":1,"freq":868.100000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-118,"lsnr":-20.0,"foff":-221,"rssi":-100,"size":23,"data":"ALDrAtB+1bNmk8JAAAC36Oj5Nwa4n+M="}]}
+
+##### 2025-07-04 13:49:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 1 (23 bytes)
+# PUSH_DATA datagrams sent: 2 (375 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 450894541
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:49:29 GMT","rxnb":1,"rxok":1,"rxfw":1,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.4}}
+
+##### 2025-07-04 13:49:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 480896905
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 27 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:49:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.4}}
+
+##### 2025-07-04 13:50:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 510899269
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:50:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.5}}
+
+##### 2025-07-04 13:50:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 540901061
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:50:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.5}}
+
+##### 2025-07-04 13:51:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 570903257
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:51:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.6}}
+
+##### 2025-07-04 13:51:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 600907590
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:51:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.6}}
+
+##### 2025-07-04 13:52:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 630909962
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:52:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.7}}
+
+##### 2025-07-04 13:52:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 660913373
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:52:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.7}}
+
+##### 2025-07-04 13:53:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 690915997
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:53:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.7}}
+
+##### 2025-07-04 13:53:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 720918381
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:53:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.7}}
+
+##### 2025-07-04 13:54:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 750925303
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:54:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:54:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 780930019
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:54:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.7}}
+
+##### 2025-07-04 13:55:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 810934229
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:55:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:55:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 840935811
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:55:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:56:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 870938036
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:56:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:56:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 900943273
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:56:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:57:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 930946936
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:57:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:57:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 960951586
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:57:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:58:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 990955906
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:58:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.8}}
+
+##### 2025-07-04 13:58:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1020957976
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:58:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 13:59:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1050959688
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:59:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 13:59:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1080961874
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 13:59:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 14:00:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1110963362
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:00:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 14:00:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1140967257
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:00:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 14:01:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1170969208
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:01:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 14:01:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1200971099
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:01:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 14:02:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1230972581
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:02:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.0}}
+
+##### 2025-07-04 14:02:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1260974498
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:02:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.0}}
+
+##### 2025-07-04 14:03:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1290975936
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:03:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.0}}
+
+##### 2025-07-04 14:03:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1320977537
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:03:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+INFO: Received pkt from mote: 01010101 (fcnt=257)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":1328258924,"chan":2,"rfch":1,"freq":868.500000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-120,"lsnr":-20.5,"foff":123,"rssi":-100,"size":23,"data":"AAEBAQEBAQEBtfQ7ABXhgACYBvdv8Hg="}]}
+
+##### 2025-07-04 14:04:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 1 (23 bytes)
+# PUSH_DATA datagrams sent: 2 (375 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1350979096
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:04:29 GMT","rxnb":1,"rxok":1,"rxfw":1,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:04:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1380982529
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:04:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:05:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1410985206
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:05:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:05:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 0.00%, CRC_FAIL: 100.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1440987010
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:05:59 GMT","rxnb":1,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:06:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1470989454
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:06:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:06:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1500991396
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:06:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:07:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1530993743
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:07:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:07:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1560996177
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:07:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:08:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1590999181
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:08:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:08:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1621003869
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:08:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:09:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1651007780
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:09:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:09:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1681010216
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:09:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:10:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1711012491
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:10:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:10:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1741014719
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:10:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:11:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1771016544
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:11:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:11:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1801018132
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:11:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:12:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1831019568
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:12:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:12:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1861021159
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:12:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:13:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1891025902
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:13:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.3}}
+
+INFO: Received pkt from mote: D002EBB0 (fcnt=46037)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":1918257069,"chan":1,"rfch":1,"freq":868.300000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-121,"lsnr":-21.0,"foff":-383,"rssi":-101,"size":23,"data":"ALDrAtB+1bNm2MJAAAC36OidZTDffXg="}]}
+
+##### 2025-07-04 14:13:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 1 (23 bytes)
+# PUSH_DATA datagrams sent: 2 (376 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1921027534
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:13:59 GMT","rxnb":1,"rxok":1,"rxfw":1,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.3}}
+
+##### 2025-07-04 14:14:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1951029812
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:14:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:14:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1981031385
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:14:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.3}}
+
+##### 2025-07-04 14:15:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2011033322
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:15:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.3}}
+
+##### 2025-07-04 14:15:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2041034848
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:15:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:16:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2071037854
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:16:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:16:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2101039876
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:16:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:17:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2131041321
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:17:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+INFO: Received pkt from mote: D002EBB0 (fcnt=46037)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":2158085357,"chan":2,"rfch":1,"freq":868.500000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-119,"lsnr":-22.5,"foff":-458,"rssi":-98,"size":23,"data":"ALDrAtB+1bNm2MJAAAC36OgjGyQ2tus="}]}
+
+##### 2025-07-04 14:17:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 1
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 1 (23 bytes)
+# PUSH_DATA datagrams sent: 2 (375 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2161042699
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:17:59 GMT","rxnb":1,"rxok":1,"rxfw":1,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:18:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2191044326
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:18:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:18:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2221046829
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:18:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:19:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2251049478
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:19:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:19:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2281052513
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:19:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:20:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2311054841
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:20:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:20:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2341056606
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:20:59 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:21:29 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2371058435
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:21:29 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+^C
+##### 2025-07-04 14:21:39 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 1 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 2381518937
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+
+INFO: End of upstream thread
+
+INFO: End of JIT thread
+### Concentrator temperature: 29 C ###
+##### END #####
+
+INFO: End of downstream thread
+Closing USB communication interface
+INFO: concentrator stopped successfully
+INFO: Exiting packet forwarder program
+(base) sennels@Euler:~/Desktop/RAK_gateway/sx1302_hal/packet_forwarder$ sudo ./lora_pkt_fwd 
+[sudo] password for sennels: 
+*** Packet Forwarder ***
+Version: 2.1.0
+*** SX1302 HAL library version info ***
+Version: 2.1.0;
+***
+INFO: Little endian host
+INFO: found configuration file global_conf.json, parsing it
+INFO: global_conf.json does contain a JSON object named SX130x_conf, parsing SX1302 parameters
+INFO: com_type USB, com_path /dev/ttyACM1, lorawan_public 1, clksrc 0, full_duplex 0
+INFO: antenna_gain 0 dBi
+INFO: Configuring legacy timestamp
+INFO: SX1261 spi_path is not configured in global_conf.json
+INFO: Configuring Tx Gain LUT for rf_chain 0 with 16 indexes for sx1250
+INFO: radio 0 enabled (type SX1250), center frequency 867500000, RSSI offset -215.399994, tx enabled 1, single input mode 0
+INFO: radio 1 enabled (type SX1250), center frequency 868500000, RSSI offset -215.399994, tx enabled 0, single input mode 0
+INFO: Lora multi-SF channel 0>  radio 1, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 1>  radio 1, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 2>  radio 1, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 3>  radio 0, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 4>  radio 0, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 5>  radio 0, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 6>  radio 0, IF 200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 7>  radio 0, IF 400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora std channel> radio 1, IF -200000 Hz, 250000 Hz bw, SF 7, Explicit header
+INFO: FSK channel> radio 1, IF 300000 Hz, 125000 Hz bw, 50000 bps datarate
+INFO: global_conf.json does contain a JSON object named gateway_conf, parsing gateway parameters
+INFO: gateway MAC address is configured to AA555A0000000000
+INFO: server hostname or IP address is configured to "localhost"
+INFO: upstream port is configured to "1730"
+INFO: downstream port is configured to "1730"
+INFO: downstream keep-alive interval is configured to 10 seconds
+INFO: statistics display interval is configured to 30 seconds
+INFO: upstream PUSH_DATA time-out is configured to 100 ms
+INFO: packets received with a valid CRC will be forwarded
+INFO: packets received with a CRC error will NOT be forwarded
+INFO: packets received with no CRC will NOT be forwarded
+INFO: GPS serial port path is configured to "/dev/ttyS0"
+INFO: Reference latitude is configured to 0.000000 deg
+INFO: Reference longitude is configured to 0.000000 deg
+INFO: Reference altitude is configured to 0 meters
+INFO: Beaconing period is configured to 0 seconds
+INFO: Beaconing signal will be emitted at 869525000 Hz
+INFO: Beaconing datarate is set to SF9
+INFO: Beaconing modulation bandwidth is set to 125000Hz
+INFO: Beaconing TX power is set to 14dBm
+INFO: Beaconing information descriptor is set to 0
+INFO: global_conf.json does contain a JSON object named debug_conf, parsing debug parameters
+INFO: got 2 debug reference payload
+INFO: reference payload ID 0 is 0xCAFE1234
+INFO: reference payload ID 1 is 0xCAFE2345
+INFO: setting debug log file name to loragw_hal.log
+WARNING: [main] impossible to open /dev/ttyS0 for GPS sync (check permissions)
+Opening USB communication interface
+INFO: Configuring TTY
+INFO: Flushing TTY
+INFO: Setting TTY in blocking mode
+INFO: Connect to MCU
+INFO: Concentrator MCU version is V01.00.00
+INFO: MCU status: sys_time:6059198 temperature:27.8oC
+Note: chip version is 0x12 (v1.2)
+INFO: using legacy timestamp
+INFO: LoRa Service modem: configuring preamble size to 8 symbols
+ARB: dual demodulation disabled for all SF
+INFO: [main] concentrator started, packet can now be received
+INFO: concentrator EUI: 0x0016c001f1563f28
+
+##### 2025-07-04 14:24:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 0 (0 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 30834487
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:24:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":27.9}}
+
+##### 2025-07-04 14:25:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 60836795
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:25:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.1}}
+
+##### 2025-07-04 14:25:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 90838237
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:25:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:26:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 120839696
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:26:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.2}}
+
+##### 2025-07-04 14:26:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 150841323
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:26:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.3}}
+
+##### 2025-07-04 14:27:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 180842700
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:27:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:27:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 210844202
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:27:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:28:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 240846515
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:28:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.4}}
+
+##### 2025-07-04 14:28:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 270847981
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:28:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:29:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 300850516
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:29:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:29:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 330855649
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:29:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:30:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 360856932
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 28 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:30:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.5}}
+
+##### 2025-07-04 14:30:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 390858859
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:30:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:31:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 420860885
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:31:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:31:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 450865906
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:31:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:32:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 480867777
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:32:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:32:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 510869215
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:32:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:33:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 540871391
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:33:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:33:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 570873702
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:33:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.6}}
+
+##### 2025-07-04 14:34:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 600877136
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:34:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+##### 2025-07-04 14:34:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 630878644
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:34:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:35:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 660880751
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:35:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:35:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 690882504
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:35:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:36:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 720883941
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:36:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:36:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 750885472
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:36:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:37:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 780888745
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:37:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:37:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 810890078
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:37:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:38:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 840892487
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:38:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.9}}
+
+##### 2025-07-04 14:38:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 870893897
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:38:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:39:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 900895890
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:39:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:39:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 930897548
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:39:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:40:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 960899247
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:40:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:40:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 990901574
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:40:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.9}}
+
+##### 2025-07-04 14:41:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1020903578
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:41:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:41:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1050905270
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:41:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:42:24 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1080906772
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:42:24 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:42:54 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1110908360
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:42:54 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+^C
+##### 2025-07-04 14:42:59 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 1 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 1116623609
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+INFO: End of JIT thread
+
+INFO: End of upstream thread
+
+INFO: End of downstream thread
+Closing USB communication interface
+INFO: concentrator stopped successfully
+INFO: Exiting packet forwarder program
+(base) sennels@Euler:~/Desktop/RAK_gateway/sx1302_hal/packet_forwarder$ sudo ./lora_pkt_fwd 
+[sudo] password for sennels: 
+*** Packet Forwarder ***
+Version: 2.1.0
+*** SX1302 HAL library version info ***
+Version: 2.1.0;
+***
+INFO: Little endian host
+INFO: found configuration file global_conf.json, parsing it
+INFO: global_conf.json does contain a JSON object named SX130x_conf, parsing SX1302 parameters
+INFO: com_type USB, com_path /dev/ttyACM1, lorawan_public 1, clksrc 0, full_duplex 0
+INFO: antenna_gain 0 dBi
+INFO: Configuring legacy timestamp
+INFO: SX1261 spi_path is not configured in global_conf.json
+INFO: Configuring Tx Gain LUT for rf_chain 0 with 16 indexes for sx1250
+INFO: radio 0 enabled (type SX1250), center frequency 867500000, RSSI offset -215.399994, tx enabled 1, single input mode 0
+INFO: radio 1 enabled (type SX1250), center frequency 868500000, RSSI offset -215.399994, tx enabled 0, single input mode 0
+INFO: Lora multi-SF channel 0>  radio 1, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 1>  radio 1, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 2>  radio 1, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 3>  radio 0, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 4>  radio 0, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 5>  radio 0, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 6>  radio 0, IF 200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 7>  radio 0, IF 400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora std channel> radio 1, IF -200000 Hz, 250000 Hz bw, SF 7, Explicit header
+INFO: FSK channel> radio 1, IF 300000 Hz, 125000 Hz bw, 50000 bps datarate
+INFO: global_conf.json does contain a JSON object named gateway_conf, parsing gateway parameters
+INFO: gateway MAC address is configured to AA555A0000000000
+INFO: server hostname or IP address is configured to "localhost"
+INFO: upstream port is configured to "1730"
+INFO: downstream port is configured to "1730"
+INFO: downstream keep-alive interval is configured to 10 seconds
+INFO: statistics display interval is configured to 30 seconds
+INFO: upstream PUSH_DATA time-out is configured to 100 ms
+INFO: packets received with a valid CRC will be forwarded
+INFO: packets received with a CRC error will NOT be forwarded
+INFO: packets received with no CRC will NOT be forwarded
+INFO: GPS serial port path is configured to "/dev/ttyS0"
+INFO: Reference latitude is configured to 0.000000 deg
+INFO: Reference longitude is configured to 0.000000 deg
+INFO: Reference altitude is configured to 0 meters
+INFO: Beaconing period is configured to 0 seconds
+INFO: Beaconing signal will be emitted at 869525000 Hz
+INFO: Beaconing datarate is set to SF9
+INFO: Beaconing modulation bandwidth is set to 125000Hz
+INFO: Beaconing TX power is set to 14dBm
+INFO: Beaconing information descriptor is set to 0
+INFO: global_conf.json does contain a JSON object named debug_conf, parsing debug parameters
+INFO: got 2 debug reference payload
+INFO: reference payload ID 0 is 0xCAFE1234
+INFO: reference payload ID 1 is 0xCAFE2345
+INFO: setting debug log file name to loragw_hal.log
+WARNING: [main] impossible to open /dev/ttyS0 for GPS sync (check permissions)
+Opening USB communication interface
+INFO: Configuring TTY
+INFO: Flushing TTY
+INFO: Setting TTY in blocking mode
+INFO: Connect to MCU
+INFO: Concentrator MCU version is V01.00.00
+INFO: MCU status: sys_time:7359216 temperature:28.8oC
+Note: chip version is 0x12 (v1.2)
+INFO: using legacy timestamp
+INFO: LoRa Service modem: configuring preamble size to 8 symbols
+ARB: dual demodulation disabled for all SF
+INFO: [main] concentrator started, packet can now be received
+INFO: concentrator EUI: 0x0016c001f1563f28
+
+##### 2025-07-04 14:43:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 0 (0 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 30809672
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:43:35 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:44:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 60813363
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:44:05 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:44:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 90814841
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:44:35 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:45:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 120816827
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:45:05 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:45:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 150820246
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:45:35 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:46:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 180821526
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:46:05 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+##### 2025-07-04 14:46:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 210822956
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:46:35 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":218971276,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-36,"lsnr":11.5,"foff":-228,"rssi":-35,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":224583272,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-198,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":230195240,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-198,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":235807258,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:47:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 4
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 4 (28 bytes)
+# PUSH_DATA datagrams sent: 5 (1031 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 240825143
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:47:05 GMT","rxnb":4,"rxok":4,"rxfw":4,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":241419221,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":247031228,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":252643225,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":258255217,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":263867195,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":269479182,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:47:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 6
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 6 (42 bytes)
+# PUSH_DATA datagrams sent: 7 (1485 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 270827256
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:47:35 GMT","rxnb":6,"rxok":6,"rxfw":6,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":275091164,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":280703171,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":10.2,"foff":-244,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":286315152,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-36,"lsnr":12.0,"foff":-228,"rssi":-36,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":291927148,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-36,"lsnr":11.8,"foff":-228,"rssi":-35,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":297539152,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-36,"lsnr":11.8,"foff":-228,"rssi":-35,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:48:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 300832878
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:48:05 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":303151120,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":10.8,"foff":-183,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":308763113,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":10.0,"foff":-289,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":314375127,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":319987116,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":325599108,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:48:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 330834698
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:48:35 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":331211078,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":336823061,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":342435058,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":348047067,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":353659056,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":10.0,"foff":-228,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":359271055,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":10.2,"foff":-228,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:49:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 6
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 6 (42 bytes)
+# PUSH_DATA datagrams sent: 7 (1485 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 360839111
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:49:05 GMT","rxnb":6,"rxok":6,"rxfw":6,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+##### 2025-07-04 14:49:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 390841262
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:49:35 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":413034770,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":418646778,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:50:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 2
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 2 (14 bytes)
+# PUSH_DATA datagrams sent: 3 (577 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 420842897
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:50:05 GMT","rxnb":2,"rxok":2,"rxfw":2,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":424258767,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":429870761,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":435482739,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-38,"lsnr":8.5,"foff":-228,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":441094730,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":9.0,"foff":-289,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":446706733,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-38,"lsnr":9.0,"foff":-228,"rssi":-38,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:50:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1255 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 450845522
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:50:35 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":452318712,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-198,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":457930707,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":463542692,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":469154697,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":474766692,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-198,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":480378677,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:51:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 6
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 6 (42 bytes)
+# PUSH_DATA datagrams sent: 7 (1485 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 480848121
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:51:05 GMT","rxnb":6,"rxok":6,"rxfw":6,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":485990667,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":491602653,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":497214635,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":502826641,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: D002EBB0 (fcnt=46037)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":502904958,"chan":2,"rfch":1,"freq":868.500000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-118,"lsnr":-22.2,"foff":-258,"rssi":-97,"size":23,"data":"ALDrAtB+1bNmk8JAAAC36Oj3+RW0/eA="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":508438623,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:51:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 6
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 6 (58 bytes)
+# PUSH_DATA datagrams sent: 7 (1509 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 510850655
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:51:35 GMT","rxnb":6,"rxok":6,"rxfw":6,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.7}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":514050612,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":519662611,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":525274595,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":530886596,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":536498578,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:52:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 540852644
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:52:05 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":542110564,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":547722552,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":553334547,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":558946554,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":564558537,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":570170523,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:52:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 7
+# CRC_OK: 85.71%, CRC_FAIL: 14.29%, NO_CRC: 0.00%
+# RF packets forwarded: 6 (42 bytes)
+# PUSH_DATA datagrams sent: 7 (1485 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 570854999
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:52:35 GMT","rxnb":7,"rxok":6,"rxfw":6,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":575782507,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-198,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":581394501,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":587006511,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.8,"foff":-228,"rssi":-41,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":592618487,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-41,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":598230485,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.8,"foff":-228,"rssi":-41,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:53:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 600856723
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:53:05 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":603842459,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":609454465,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":615066462,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.2,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":620678460,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":626290438,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:53:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 630858711
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:53:35 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":631902444,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":637514426,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":643126402,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":648738408,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":654350402,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.2,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":659962388,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-41,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:54:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 6
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 6 (42 bytes)
+# PUSH_DATA datagrams sent: 7 (1485 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 660861597
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:54:05 GMT","rxnb":6,"rxok":6,"rxfw":6,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":665574377,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-198,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":671186363,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":676798356,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":682410339,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":688022347,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:54:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 690863927
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:54:35 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":693634326,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":699246318,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":704858310,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":710470313,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":716082301,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:55:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 720867832
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:55:05 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":721694289,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":727306262,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":732918270,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-39,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":738530265,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: D002EBB0 (fcnt=46037)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":743829123,"chan":0,"rfch":1,"freq":868.100000,"mid": 0,"stat":1,"modu":"LORA","datr":"SF12BW125","codr":"4/5","rssis":-117,"lsnr":-16.2,"foff":-234,"rssi":-102,"size":23,"data":"ALDrAtB+1bNmk8JAAAC36OjgOQzX5Hc="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":744142250,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":749754244,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:55:35 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 7
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 7 (65 bytes)
+# PUSH_DATA datagrams sent: 8 (1737 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 750870000
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:55:35 GMT","rxnb":7,"rxok":7,"rxfw":7,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":755366227,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":760978207,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-41,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":766590210,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":772202196,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":777814188,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+##### 2025-07-04 14:56:05 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 5
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 5 (35 bytes)
+# PUSH_DATA datagrams sent: 6 (1258 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 780872435
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2025-07-04 14:56:05 GMT","rxnb":5,"rxok":5,"rxfw":5,"ackr":0.0,"dwnb":0,"txnb":0,"temp":28.8}}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":783426190,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":789038170,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.5,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":794650159,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-39,"size":7,"data":"dGVzdGV0cw=="}]}
+
+INFO: Received pkt from mote: 00000000 (fcnt=0)
+
+JSON up: {"rxpk":[{"jver":1,"tmst":800262162,"chan":5,"rfch":0,"freq":867.500000,"mid": 8,"stat":1,"modu":"LORA","datr":"SF6BW125","codr":"4/7","rssis":-40,"lsnr":11.8,"foff":-228,"rssi":-40,"size":7,"data":"dGVzdGV0cw=="}]}
+^C
+##### 2025-07-04 14:56:27 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 4
+# CRC_OK: 100.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 4 (28 bytes)
+# PUSH_DATA datagrams sent: 5 (1031 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 2 (0.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 802784454
+# SX1302 counter (PPS):  0
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:440:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# GPS sync is disabled
+### Concentrator temperature: 29 C ###
+##### END #####
+
+INFO: End of JIT thread
+
+INFO: End of upstream thread
+
+INFO: End of downstream thread
+Closing USB communication interface
+INFO: concentrator stopped successfully
+INFO: Exiting packet forwarder program
